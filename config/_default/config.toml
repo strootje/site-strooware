@@ -1,0 +1,8 @@
+
+# Base Settings
+title = "Strooware.xyz"
+baseURL = "https://strooware.xyz"
+theme = "gohugo-theme-coming-soon"
+
+# Language Settings
+defaultContentLanguage = "en"
