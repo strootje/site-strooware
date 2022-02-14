@@ -1,0 +1,3 @@
+[submodule "themes/gohugo-theme-coming-soon"]
+	path = themes/gohugo-theme-coming-soon
+	url = https://git.strooweb.nl/strootje/gohugo-theme-coming-soon
