@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="137.09552mm"
+   height="97.881256mm"
+   viewBox="0 0 137.09552 97.881253"
+   version="1.1"
+   id="svg889"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="logo-strooware-red.svg"
+   inkscape:export-filename="/home/bastiaan/SyncStore/Strooware/designs/logo-strooware-red.png"
+   inkscape:export-xdpi="91.730003"
+   inkscape:export-ydpi="91.730003"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview891"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.5683642"
+     inkscape:cx="48.384469"
+     inkscape:cy="316.69834"
+     inkscape:window-width="1692"
+     inkscape:window-height="1410"
+     inkscape:window-x="1744"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs886">
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter2797"
+       x="0"
+       y="0"
+       width="1.0038111"
+       height="1.0054651">
+      <feFlood
+         flood-opacity="1"
+         flood-color="rgb(255,255,255)"
+         result="flood"
+         id="feFlood2787" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite2789" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="0"
+         result="blur"
+         id="feGaussianBlur2791" />
+      <feOffset
+         dx="0.3"
+         dy="0.3"
+         result="offset"
+         id="feOffset2793" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="fbSourceGraphic"
+         id="feComposite2795" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix2817" />
+      <feFlood
+         id="feFlood2819"
+         flood-opacity="1"
+         flood-color="rgb(62,71,78)"
+         result="flood"
+         in="fbSourceGraphic" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite2821"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         id="feGaussianBlur2823"
+         in="composite1"
+         stdDeviation="0"
+         result="blur" />
+      <feOffset
+         id="feOffset2825"
+         dx="0.3"
+         dy="0.3"
+         result="offset" />
+      <feComposite
+         in2="offset"
+         id="feComposite2827"
+         in="fbSourceGraphic"
+         operator="over"
+         result="composite2" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter59639-0"
+       x="0"
+       y="0"
+       width="1.0088514"
+       height="1.0123749">
+      <feFlood
+         flood-opacity="1"
+         flood-color="rgb(255,255,255)"
+         result="flood"
+         id="feFlood59629-4" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite59631-4" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="0"
+         result="blur"
+         id="feGaussianBlur59633-4" />
+      <feOffset
+         dx="0.1"
+         dy="0.1"
+         result="offset"
+         id="feOffset59635-4" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="fbSourceGraphic"
+         id="feComposite59637-7" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix59659-6" />
+      <feFlood
+         id="feFlood59661-3"
+         flood-opacity="1"
+         flood-color="rgb(184,79,56)"
+         result="flood"
+         in="fbSourceGraphic" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite59663-1"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         id="feGaussianBlur59665-7"
+         in="composite1"
+         stdDeviation="0"
+         result="blur" />
+      <feOffset
+         id="feOffset59667-5"
+         dx="0.1"
+         dy="0.1"
+         result="offset" />
+      <feComposite
+         in2="offset"
+         id="feComposite59669-9"
+         in="fbSourceGraphic"
+         operator="over"
+         result="composite2" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter5341"
+       x="-0.0089444549"
+       y="-0.24010838"
+       width="1.0276951"
+       height="1.7434581">
+      <feFlood
+         flood-opacity="1"
+         flood-color="rgb(255,255,255)"
+         result="flood"
+         id="feFlood5331" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite5333" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="0"
+         result="blur"
+         id="feGaussianBlur5335" />
+      <feOffset
+         dx="0.1"
+         dy="0.1"
+         result="offset"
+         id="feOffset5337" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="fbSourceGraphic"
+         id="feComposite5339" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix5391" />
+      <feFlood
+         id="feFlood5393"
+         flood-opacity="1"
+         flood-color="rgb(62,71,78)"
+         result="flood"
+         in="fbSourceGraphic" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite5395"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         id="feGaussianBlur5397"
+         in="composite1"
+         stdDeviation="0"
+         result="blur" />
+      <feOffset
+         id="feOffset5399"
+         dx="0.1"
+         dy="0.1"
+         result="offset" />
+      <feComposite
+         in2="offset"
+         id="feComposite5401"
+         in="fbSourceGraphic"
+         operator="over"
+         result="composite2" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-8.5466553,-25.166751)">
+    <g
+       id="g59507-6"
+       style="stroke-width:2.06019;filter:url(#filter5341)"
+       transform="matrix(6.040703,0,0,6.0191057,-425.4248,-412.26143)"
+       inkscape:export-filename="/home/bastiaan/SyncStore/Strooware/designs/logo-strooware-red.png"
+       inkscape:export-xdpi="91.730003"
+       inkscape:export-ydpi="91.730003">
+      <text
+         xml:space="preserve"
+         style="font-size:10.5833px;line-height:0.65;font-family:Norwester;-inkscape-font-specification:Norwester;text-align:start;letter-spacing:0px;text-anchor:start;fill:#b84f38;fill-opacity:1;stroke-width:0.54509;stroke-linecap:round"
+         x="71.841217"
+         y="80.706009"
+         id="text38537-2"><tspan
+           sodipodi:role="line"
+           id="tspan38535-1"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:podriq;-inkscape-font-specification:podriq;text-align:start;text-anchor:start;fill:#b84f38;fill-opacity:1;stroke-width:0.54509;stroke-linecap:round"
+           x="71.841217"
+           y="80.706009">Stroo</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:podriq;-inkscape-font-specification:podriq;text-align:start;text-anchor:start;fill:#b84f38;fill-opacity:1;stroke-width:0.54509;stroke-linecap:round"
+           x="71.841217"
+           y="88.835045"
+           id="tspan38539-7">Ware</tspan></text>
+      <path
+         style="fill:none;stroke:#b84f38;stroke-width:0.364849;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 73.091392,83.134796 h 1.664575 m 2.116667,0 h 1.651041 m 2.116667,0 h 12.846312"
+         id="path50040-1-5"
+         sodipodi:nodetypes="cccccc" />
+      <path
+         style="fill:none;stroke:#b84f38;stroke-width:0.364849;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 73.091392,82.375037 h 1.664575 m 2.116667,0 h 1.651041 m 2.116667,0 h 12.846312"
+         id="path50040-1-5-4"
+         sodipodi:nodetypes="cccccc" />
+    </g>
+  </g>
+</svg>
