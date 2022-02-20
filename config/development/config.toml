@@ -1,5 +1,4 @@
 
-themesDir = ".."
 buildDrafts = true
 buildFuture = true
 enableMissingTranslationPlaceholders = true

@@ -1,0 +1,11 @@
+[friendica]
+follow = "https://%INSTANCE%/profile/%USERNAME%/profile"
+
+[gitea]
+follow = "https://%INSTANCE%/%USERNAME%"
+
+[github]
+follow = "https://github.com/%USERNAME%"
+
+[xmpp]
+follow = "xmpp://%USERNAME%@%INSTANCE%"
