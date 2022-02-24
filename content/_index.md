@@ -7,3 +7,4 @@ Hoi, laat ik mezelf even voorstellen. Ik ben Bas, ik heb ondertussen al ruim 10 
 <!-- Hoi, laat ik mezelf even voorstellen. Ik ben Bas, Professioneel IT'er met meer dan 10 jaar ervaring. Toen ik 9 jaar oud was kreeg ik van mijn moeder het boek [PHP voor Dummies][php-for-dummies]. Iedereen kent deze boeken wel. Dit was het eerste boek dat ik van kaft tot kaft heb gelezen en ik wou meer. -->
 
 <!-- [php-for-dummies]: https://archive.org/details/PHPMySQLForDummies -->
+<!-- https://miguelsimoni.github.io/hugo-initio-site/# -->

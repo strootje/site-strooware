@@ -1,12 +1,14 @@
 +++
-title = "Advisering"
+title = "Advies"
 type = "contact"
 subject = "Professional IT Consultancy"
 date = 2022-02-03
 +++
 
-* 10 jaar professionele ervaring
+* 100.00 EUR starttarief
+
+* Afspraak mogelijk op locatie
 
 * Persoonlijke Aandacht voor jouw situatie
 
-* Advies op maat
+* Vrijblijvend advies in de vorm van een rapport
