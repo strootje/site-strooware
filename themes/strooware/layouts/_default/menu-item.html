@@ -1,0 +1,9 @@
+<li>
+	<a href="{{- .RelPermalink -}}">
+		{{- if .IsHome -}}
+		{{- T "site.home" -}}
+		{{- else -}}
+		{{- .Title -}}
+		{{- end -}}
+	</a>
+</li>

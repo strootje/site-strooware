@@ -1,0 +1,22 @@
+%-reset {
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+}
+
+html {
+	@extend %-reset;
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+body {
+	@extend %-reset;
+	font-size: 1.6em;
+}
+
+*, *::before, *::after {
+	font-size: 1em;
+	font-family: inherit;
+	box-sizing: inherit;
+}

@@ -1,0 +1,23 @@
+{{- $opts := (dict) -}}
+{{- if hugo.IsProduction -}}
+{{- $opts = merge $opts (dict "outputStyle" "compressed" "enableSourceMap" true) -}}
+{{- end -}}
+
+{{- $stack := resources.Get "styles/stack.scss" | toCSS $opts | fingerprint "sha512" -}}
+<link rel="preload" as="style" href="{{- $stack.RelPermalink -}}" crossorigin="use-credentials"
+	integrity="{{- $stack.Data.Integrity -}}" onload="this.rel = 'stylesheet'" />
+
+{{- $bundle := resources.Get "styles/theme.scss" | resources.ExecuteAsTemplate "theme.scss" . | toCSS $opts | fingerprint "sha512" -}}
+<link rel="preload" as="style" href="{{- $bundle.RelPermalink -}}" crossorigin="use-credentials"
+	integrity="{{- $bundle.Data.Integrity -}}" onload="this.rel = 'stylesheet'" />
+
+<link rel="preload" as="style" href="//fonts.cdnfonts.com/css/norwester" crossorigin="anonymous"
+	onload="this.rel = 'stylesheet'" />
+<link rel="preload" as="style" href="//brick.freetls.fastly.net/Inconsolata:500" crossorigin="anonymous"
+	onload="this.rel = 'stylesheet'" />
+
+<!--
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css"
+	integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous"
+	referrerpolicy="no-referrer" />
+-->

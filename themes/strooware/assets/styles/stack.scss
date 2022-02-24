@@ -1,0 +1,61 @@
+
+%-shared {
+	gap: var(--gap-vertical, 1rem) var(--gap-horizontal, 2rem);
+
+	&:is(ul) {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+}
+
+.wrapper {
+	@extend %-shared;
+	display: flex;
+	flex-direction: column;
+
+	& > .u-grow {
+		flex-grow: 1;
+	}
+}
+
+%-shared-grid {
+	@extend %-shared;
+	display: grid;
+
+	&.u-middle { justify-content: center; }
+	&.u-spread { justify-content: space-between; }
+
+	&.u-center { justify-items: center; }
+	&.u-end { justify-items: end; }
+}
+
+.stack {
+	@extend %-shared-grid;
+	grid-auto-rows: max-content;
+	grid-auto-flow: row;
+
+	&.u-wrapper {
+		grid-template-columns: 1fr minmax(var(--break-min, 32ch), var((--break-max, 102ch))) 1fr;
+		& > * { grid-column: 2; }
+	}
+}
+
+.level {
+	@extend %-shared-grid;
+	grid-auto-columns: var(--auto-columns, max-content);
+	grid-auto-flow: column;
+
+	&.u-1fr {
+		--auto-columns: 1fr;
+	}
+}
+
+.grid {
+	@extend %-shared-grid;
+	grid-template-columns: repeat(auto-fit, minmax(var(--grid-column-size, 200px), 1fr));
+}
+
+.u-centered {
+	text-align: center;
+}

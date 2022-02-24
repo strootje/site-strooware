@@ -1,7 +1,18 @@
 
 # Base Settings
-title = "Strooware.xyz"
+title = "Coaching | Strooware Interactive"
 baseURL = "https://strooware.xyz"
 
+# Theme Settings
+theme = "strooware"
+
 # Language Settings
-defaultContentLanguage = "en"
+defaultContentLanguage = "nl"
+
+# Params
+[[params.footer.extra]]
+text = "KvK 75604442"
+[[params.footer.extra]]
+text = "Btw NL002240901B10"
+[[params.footer.extra]]
+text = "IBAN NL16 KNAB 0259 4681 18"

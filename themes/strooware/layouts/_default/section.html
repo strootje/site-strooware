@@ -1,0 +1,34 @@
+<section>
+	<h2><span>{{- .Title -}}</span></h2>
+
+	{{- with .Content -}}
+	<span>{{- . -}}</span>
+	{{- end -}}
+
+	{{- $direction := .Params.direction | default "grid" -}}
+	<div class="{{- $direction }} u-1fr">
+		{{- range .Pages -}}
+		{{- partial "section-item" . -}}
+		{{- else -}}
+		{{- partial "section-item" (dict "Title" (T "site.section.no-pages" .)) -}}
+		{{- end -}}
+	</div>
+</section>
+
+{{- define "partials/section-item" -}}
+<article class="card wrapper">
+	<header>
+		<h3>{{- .Title -}}</h3>
+	</header>
+
+	{{- with .Content -}}
+	<div class="u-grow">{{- . -}}</div>
+	{{- end -}}
+
+	{{- with .RelPermalink -}}
+	<footer>
+		<a class="button" href="{{- . -}}">{{- T "site.section.connect" . -}}</a>
+	</footer>
+	{{- end -}}
+</article>
+{{- end -}}

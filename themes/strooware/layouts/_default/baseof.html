@@ -1,0 +1,74 @@
+{{- $lang := .Site.Language -}}
+
+<!DOCTYPE html>
+<html lang="{{- $lang -}}">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{- .Site.Title -}}</title>
+
+	{{- partial "_head/favicon" . -}}
+	{{- partial "_head/alternatives" . -}}
+	{{- partial "_head/styles" . -}}
+</head>
+
+<body class="wrapper">
+	<div class="stack u-grow">
+		<header class="stack">
+			<h1 class="stack u-center">
+				{{- with resources.Get "images/logo.svg" -}}
+				<img src="{{- .RelPermalink -}}" />
+				{{- end -}}
+			</h1>
+
+			<nav>
+				<ul class="level u-middle">
+					{{- .Site.Home.Render "menu-item" -}}
+					{{- range .Site.Menus.header -}}
+					{{- .Page.Render "menu-item" -}}
+					{{- end -}}
+				</ul>
+			</nav>
+		</header>
+
+		{{- block "content" . -}}
+		<!-- nothing here -->
+		{{- end -}}
+	</div>
+
+	<footer>
+		{{- if not hugo.IsProduction -}}
+		<section class="stack u-wrapper">
+			<div class="grid" style="--grid-column-size: 150px;">
+				<span class="u-centered"></span>
+
+				{{- with .Site.Params.Socials -}}
+				<span class="u-centered">TODO: Socials</span>
+				{{- end -}}
+
+				<span class="u-centered"></span>
+				<span class="u-centered"></span>
+
+				<span class="stack u-center">
+					<span>{{- (T "site.copyright" (dict "Year" (now.Format "2006"))) | safeHTML -}}</span>
+					<span>{{- (T "site.designed_by" (dict "Url" "https://strootje.xyz")) | safeHTML -}}</span>
+				</span>
+			</div>
+		</section>
+		{{- end -}}
+
+		{{- with .Site.Params.Footer.Extra -}}
+		<section class="stack u-wrapper">
+			<div class="grid">
+				{{- range . -}}
+				<span class="u-centered">{{- .text -}}</span>
+				{{- end -}}
+			</div>
+		</section>
+		{{- end -}}
+	</footer>
+</body>
+
+</html>

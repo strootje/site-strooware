@@ -1,0 +1,10 @@
+
+<link rel="canonical" href="{{- .Permalink -}}" />
+
+{{- range .AlternativeOutputFormats -}}
+<link rel="{{- .Rel -}}" type="{{- .MediaType -}}" href="{{- .Permalink -}}" />
+{{- end -}}
+
+{{- range .Translations -}}
+<link rel="alternative" type="text/html" hreflang="{{- .Lang -}}" href="{{- .Permalink -}}" />
+{{- end -}}

@@ -1,0 +1,31 @@
+[site.home]
+	other = "Home"
+
+[site.section.connect]
+	other = "Kies deze"
+
+[site.contact.title]
+	other = "Stuur mij een bericht"
+[site.contact.fields.name.label]
+	other = "Jou naam"
+[site.contact.fields.name.placeholder]
+	other = "Maartje .."
+[site.contact.fields.email.label]
+	other = "Jou Email"
+[site.contact.fields.email.placeholder]
+	other = "maartje@...com"
+[site.contact.fields.subject.label]
+	other = "Onderwerp"
+[site.contact.fields.subject.placeholder]
+	other = "Coaching.."
+[site.contact.fields.message.label]
+	other = "Bericht"
+[site.contact.fields.message.placeholder]
+	other = "Hoi,\n\nCoaching lijkt mij super gaaf, want ik wil leren hoe ik .."
+[site.contact.submit.text]
+	other = "Verstuur"
+
+[site.copyright]
+	other = "Copyright &copy; {{ .Year }}"
+[site.designed_by]
+	other = "Ontworpen door <a href=\"{{- .Url -}}\">strootje</a>"

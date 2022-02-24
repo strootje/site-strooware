@@ -1,0 +1,19 @@
+{{- define "content" -}}
+<div class="stack u-wrapper">
+	{{- with .Content -}}
+	<section class="intro">
+		{{- with resources.Get "images/avatar.jpg" -}}
+		{{- $avatar := .Resize "200x" -}}
+		<figure>
+			<img src="{{- $avatar.RelPermalink -}}" />
+		</figure>
+		{{- end -}}
+		{{- . -}}
+	</section>
+	{{- end -}}
+
+	{{- range .Sections.ByWeight -}}
+	{{- .Render "section" -}}
+	{{- end -}}
+</div>
+{{- end -}}
