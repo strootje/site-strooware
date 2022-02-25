@@ -2,7 +2,7 @@
 %-shared {
 	gap: var(--gap-vertical, 1rem) var(--gap-horizontal, 2rem);
 
-	&:is(ul) {
+	&ul {
 		margin: 0;
 		padding: 0;
 		list-style-type: none;
