@@ -57,7 +57,7 @@ body {
 	text-decoration: none;
 	cursor: pointer;
 
-	&:is(:hover, :active) {
+	&:hover, &:active {
 		background-color: var(--color-primary-darker);
 	}
 }
@@ -65,7 +65,7 @@ body {
 a, a:visited {
 	color: inherit;
 
-	&:is(:hover, :active) {
+	&:hover, &:active {
 		&:not(.button) {
 			color: var(--color-primary);
 		}
@@ -184,7 +184,7 @@ body > div:first-child {
 		@include background-image('{{- .Permalink -}}', 0, top right);
 		/* {{- end -}} */
 
-		& > :is(header, footer) {
+		& > header, & > footer {
 			text-align: center;
 			z-index: 1;
 			& h3 { color: var(--color-white); }

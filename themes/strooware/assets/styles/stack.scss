@@ -53,7 +53,12 @@
 
 .grid {
 	@extend %-shared-grid;
-	grid-template-columns: repeat(auto-fit, minmax(var(--grid-column-size, 200px), 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(var(--grid-column-size, 200px), var(--grid-column-max, 1fr)));
+
+	&.u-middle {
+		--grid-column-max: max-content;
+		justify-content: center;
+	}
 }
 
 .u-centered {
