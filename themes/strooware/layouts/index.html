@@ -2,8 +2,8 @@
 <div class="stack u-wrapper">
 	{{- with .Content -}}
 	<section class="intro">
-		{{- with resources.Get "images/avatar.jpg" -}}
-		{{- $avatar := .Resize "200x" -}}
+		{{- with resources.Get "images/avatar.png" -}}
+		{{- $avatar := .Resize "200x webp" -}}
 		<figure>
 			<img src="{{- $avatar.RelPermalink -}}" />
 		</figure>
