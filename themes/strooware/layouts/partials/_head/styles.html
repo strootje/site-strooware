@@ -5,16 +5,15 @@
 
 {{- $stack := resources.Get "styles/stack.scss" | toCSS $opts | fingerprint "sha512" -}}
 <link rel="preload" as="style" href="{{- $stack.RelPermalink -}}" crossorigin="use-credentials"
-	integrity="{{- $stack.Data.Integrity -}}" onload="this.rel = 'stylesheet'" />
+	integrity="{{- $stack.Data.Integrity -}}" />
 
-{{- $bundle := resources.Get "styles/theme.scss" | resources.ExecuteAsTemplate "theme.scss" . | toCSS $opts | fingerprint "sha512" -}}
+{{- $bundle := resources.Get "styles/theme.scss" | resources.ExecuteAsTemplate "theme.scss" . | toCSS $opts |
+fingerprint "sha512" -}}
 <link rel="preload" as="style" href="{{- $bundle.RelPermalink -}}" crossorigin="use-credentials"
-	integrity="{{- $bundle.Data.Integrity -}}" onload="this.rel = 'stylesheet'" />
+	integrity="{{- $bundle.Data.Integrity -}}" />
 
-<link rel="preload" as="style" href="//fonts.cdnfonts.com/css/norwester" crossorigin="anonymous"
-	onload="this.rel = 'stylesheet'" />
-<link rel="preload" as="style" href="//brick.freetls.fastly.net/Inconsolata:500" crossorigin="anonymous"
-	onload="this.rel = 'stylesheet'" />
+<link rel="preload" as="style" href="//fonts.cdnfonts.com/css/norwester" crossorigin="anonymous" />
+<link rel="preload" as="style" href="//brick.freetls.fastly.net/Inconsolata:500" crossorigin="anonymous" />
 
 <!--
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css"

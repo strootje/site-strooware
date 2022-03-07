@@ -1,0 +1,7 @@
+{{- $opts := (dict) -}}
+{{- if hugo.IsProduction -}}
+{{- $opts = merge $opts (dict "minify" true) -}}
+{{- end -}}
+
+{{- $bundle := resources.Get "scripts/bundle.js" | js.Build $opts | fingerprint "sha512" -}}
+<script type="text/javascript" src="{{- $bundle.RelPermalink -}}" integrity="{{- $bundle.Data.Integrity -}}" defer></script>
