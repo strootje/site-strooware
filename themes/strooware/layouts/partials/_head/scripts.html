@@ -5,3 +5,5 @@
 
 {{- $bundle := resources.Get "scripts/bundle.js" | js.Build $opts | fingerprint "sha512" -}}
 <script type="text/javascript" src="{{- $bundle.RelPermalink -}}" integrity="{{- $bundle.Data.Integrity -}}" defer></script>
+
+<script async src="https://offen.strooware.xyz/script.js" data-account-id="ff359fc5-399c-4e02-8541-45ee6046c5d4"></script>
