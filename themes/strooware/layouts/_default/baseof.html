@@ -40,25 +40,13 @@
 	</div>
 
 	<footer>
-		{{- if not hugo.IsProduction -}}
 		<section class="stack u-wrapper">
-			<div class="grid" style="--grid-column-size: 150px;">
-				<span class="u-centered"></span>
-
-				{{- with .Site.Params.Socials -}}
-				<span class="u-centered">TODO: Socials</span>
-				{{- end -}}
-
-				<span class="u-centered"></span>
-				<span class="u-centered"></span>
-
-				<span class="stack u-center">
-					<span>{{- (T "site.copyright" (dict "Year" (now.Format "2006"))) | safeHTML -}}</span>
-					<span>{{- (T "site.designed_by" (dict "Url" "https://strootje.xyz")) | safeHTML -}}</span>
-				</span>
+			<div class="grid">
+				<!--<span class="u-centered">{{- (T "site.designed_by" (dict "Url" "https://strootje.xyz")) | safeHTML -}}</span>-->
+				<span class="u-centered">{{- (T "site.copyright" (dict "Year" (now.Format "2006"))) | safeHTML -}}</span>
+				<span class="u-centered"><a href="https://offen.strooware.xyz/" target="_blank">Fair Analytics</a></span>
 			</div>
 		</section>
-		{{- end -}}
 
 		{{- with .Site.Params.Footer.Extra -}}
 		<section class="stack u-wrapper">
