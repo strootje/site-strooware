@@ -17,15 +17,15 @@ steps:
       extended: true
       validate: true
 
-  - name: deploy
-    image: appleboy/drone-scp
-    settings:
-      host: 10.0.0.138
-      user:
-        from_secret: deploy_user
-      key:
-        from_secret: deploy_ssh_key
-      target: /opt/pilab/services/gohugo/strooware.xyz/content/
-      strip_components: 1
-      source: ./public/*
-      overwrite: true
+  # - name: deploy
+  #   image: appleboy/drone-scp
+  #   settings:
+  #     host: 10.0.0.138
+  #     user:
+  #       from_secret: deploy_user
+  #     key:
+  #       from_secret: deploy_ssh_key
+  #     target: /opt/pilab/services/gohugo/strooware.xyz/content/
+  #     strip_components: 1
+  #     source: ./public/*
+  #     overwrite: true
