@@ -1,0 +1,7 @@
+strooware.xyz {
+	import common
+	root * /etc/caddy/sites/xyz.strooware
+	file_server {
+		hide Caddyfile
+	}
+}
