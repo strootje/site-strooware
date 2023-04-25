@@ -5,3 +5,7 @@ strooware.xyz {
 		hide Caddyfile
 	}
 }
+
+offen.strooware.xyz {
+	import analytics
+}
