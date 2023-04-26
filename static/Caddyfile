@@ -9,3 +9,7 @@ strooware.xyz {
 offen.strooware.xyz {
 	import analytics
 }
+
+goat.strooware.xyz {
+	import goatcounter
+}
