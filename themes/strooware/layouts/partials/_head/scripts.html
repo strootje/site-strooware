@@ -6,8 +6,8 @@
 {{- $bundle := resources.Get "scripts/bundle.js" | js.Build $opts | fingerprint "sha512" -}}
 <script type="text/javascript" src="{{- $bundle.RelPermalink -}}" integrity="{{- $bundle.Data.Integrity -}}" defer></script>
 
-<script async src="https://offen.strooware.xyz/script.js" data-account-id="a9f42848-e164-4e88-abb4-8abcea3014ce"></script>
-
-<script async data-goatcounter="https://goat.strooware.xyz/count"
+{{- if hugo.IsProduction -}}
+<script async data-goatcounter="https://goat.strooware.xyz/tickle"
 	src="https://goat.strooware.xyz/count.js">
 </script>
+{{- end -}}
