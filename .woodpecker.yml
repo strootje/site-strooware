@@ -1,28 +1,26 @@
 ---
 
 pipeline:
-  step1:
+  build:
     image: docker.io/alpine:latest
     commands:
-      - env
-      - pwd
-      - ls -la
       - apk add hugo
       - hugo version
       - hugo -e production --minify
-
-  build:
-    image: docker.io/plugins/hugo
-    settings:
-      hugo_version: 0.111.0
-      extended: true
-      validate: true
+      - exit 10
 
   lighthouse:
     image: docker.io/node:lts-alpine
     commands:
       - npm install -g @lhci/cli@latest
       - lhci autorun
+
+  # build:
+  #   image: docker.io/plugins/hugo
+  #   settings:
+  #     hugo_version: 0.111.0
+  #     extended: true
+  #     validate: true
 
   # deploy:
   #   image: appleboy/drone-scp
