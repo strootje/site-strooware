@@ -1,10 +1,5 @@
 ---
 
-clone:
-  git:
-    image: woodpeckerci/plugin-git
-    settings: { lfs: false, recursive: false }
-
 pipeline:
   build:
     image: docker.io/plugins/hugo
