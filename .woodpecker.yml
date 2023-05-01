@@ -7,7 +7,6 @@ pipeline:
       - apk add hugo
       - hugo version
       - hugo -e production --minify
-      - exit 10
 
   lighthouse:
     image: docker.io/node:lts-alpine
