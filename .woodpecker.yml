@@ -1,0 +1,28 @@
+---
+
+pipeline:
+  build:
+    image: docker.io/plugins/hugo
+    settings:
+      hugo_version: 0.111.0
+      extended: true
+      validate: true
+
+  lighthouse:
+    image: docker.io/node:lts-alpine
+    commands:
+      - npm install -g @lhci/cli@latest
+      - lhci autorun
+
+  # deploy:
+  #   image: appleboy/drone-scp
+  #   settings:
+  #     host: strootje.xyz
+  #     user:
+  #       from_secret: deploy_user
+  #     key:
+  #       from_secret: deploy_ssh_key
+  #     target: /home/stroolab/.local/share/strooweb-webserver/caddy-sites/xyz.strootje
+  #     strip_components: 1
+  #     source: ./public/*
+  #     overwrite: true
