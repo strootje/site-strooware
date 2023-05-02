@@ -2,11 +2,11 @@
 
 pipeline:
   build:
-    image: docker.io/plugins/hugo:latest
-    settings:
-      hugo_version: 0.111.0
-      extended: true
-      validate: true
+    image: docker.io/alpine:latest
+    commands:
+      - apk add hugo
+      - hugo version
+      - hugo -e production --minify
 
   lighthouse:
     image: docker.io/node:lts-alpine
