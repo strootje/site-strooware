@@ -11,6 +11,7 @@ pipeline:
   lighthouse:
     image: docker.io/node:lts-alpine
     commands:
+      - apk add chromium-chromedriver
       - npm install -g @lhci/cli@latest
       - lhci autorun
 
