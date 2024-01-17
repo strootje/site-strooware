@@ -1,13 +1,15 @@
-{{- $opts := (dict) -}}
-{{- if hugo.IsProduction -}}
-{{- $opts = merge $opts (dict "minify" true) -}}
-{{- end -}}
+{{- $opts := (dict) -}} {{- if hugo.IsProduction -}} {{- $opts = merge $opts
+(dict "minify" true) -}} {{- end -}} {{- $bundle := resources.Get
+"scripts/bundle.js" | js.Build $opts | fingerprint "sha512" -}}
+<script
+  type="text/javascript"
+  src="{{- $bundle.RelPermalink -}}"
+  integrity="{{- $bundle.Data.Integrity -}}"
+  defer
+></script>
 
-{{- $bundle := resources.Get "scripts/bundle.js" | js.Build $opts | fingerprint "sha512" -}}
-<script type="text/javascript" src="{{- $bundle.RelPermalink -}}" integrity="{{- $bundle.Data.Integrity -}}" defer></script>
-
-{{- if hugo.IsProduction -}}
-<script async data-goatcounter="https://goat.strooware.xyz/tickle"
-	src="https://goat.strooware.xyz/count.js">
-</script>
-{{- end -}}
+<script
+  defer
+  data-domain="strooware.nl"
+  src="https://stats.strooware.nl/js/script.js"
+></script>
