@@ -1,7 +1,19 @@
-SITE=strooware.nl
+ENVIRONMENT=production
 -include .env.local
+VERSION=1
 
-deploy:
-	@hugo --environment=production --minify -d ./public/${SITE}
-	@kubectl cp -n=strooware ./public/${SITE} caddy-sites-65d8484f47-lzn4n:/sites
-	@kubectl exec -n=strooware -it service/caddy-sites -- caddy reload -fc=/etc/caddy/Caddyfile
+serve:
+	@hugo --environment="${ENVIRONMENT}" serve
+
+build:
+	@podman build --tag "strootje/strooware:${VERSION}" .
+
+test: build
+	@podman run --rm -it -p 1313:80 "strootje/strooware:${VERSION}"
+
+publish: build
+	@podman push "strootje/strooware:${VERSION}" "docker.io/strootje/strooware:${VERSION}"
+
+apply/%:; @kubectl apply -k .deployment/overlays/$*
+delete/%:; @kubectl delete -k .deployment/overlays/$*
+

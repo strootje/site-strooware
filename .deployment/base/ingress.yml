@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+
+metadata:
+  name: website-strooware
+  annotations:
+    kubernetes.io/ingress.class: caddy
+
+spec:
+  rules:
+    - host: tst.strooware.nl
+      http:
+        paths:
+          - path: /
+            backend:
+              service:
+                name: website-strooware
+                port:
+                  number: 80
+            pathType: Prefix
+  ingressClassName: caddy
