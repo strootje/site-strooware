@@ -6,3 +6,8 @@ namespace: strooware
 
 resources:
   - ../../base
+
+patches:
+  - patch: |-
+      - { op: replace, path: /spec/rules/0/host, value: tst.strooware.nl }
+    target: { kind: Ingress }

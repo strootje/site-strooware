@@ -8,7 +8,7 @@ metadata:
 
 spec:
   rules:
-    - host: tst.strooware.nl
+    - host: strooware.nl
       http:
         paths:
           - path: /
