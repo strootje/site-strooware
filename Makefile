@@ -1,6 +1,6 @@
 ENVIRONMENT=production
 -include .env.local
-VERSION=1
+VERSION=2
 
 serve:
 	@hugo --environment="${ENVIRONMENT}" serve
@@ -14,6 +14,6 @@ test: build
 publish: build
 	@podman push "strootje/strooware:${VERSION}" "docker.io/strootje/strooware:${VERSION}"
 
-apply/%:; @kubectl apply -k .deployment/overlays/$*
-delete/%:; @kubectl delete -k .deployment/overlays/$*
+apply/%:; @kubectl apply -k ".deployment/overlays/$*"
+delete/%:; @kubectl delete -k ".deployment/overlays/$*"
 

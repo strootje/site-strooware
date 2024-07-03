@@ -4,7 +4,9 @@ kind: Ingress
 metadata:
   name: website-strooware
   annotations:
-    kubernetes.io/ingress.class: caddy
+    kubernetes.io/ingress.class: traefik
+    cert-manager.io/cluster-issuer: acme-letsencrypt-production
+    traefik.ingress.kubernetes.io/router.middlewares: traefik-system-redirect-https@kubernetescrd
 
 spec:
   rules:
@@ -18,4 +20,8 @@ spec:
                 port:
                   number: 80
             pathType: Prefix
-  ingressClassName: caddy
+  tls:
+    - hosts:
+        - strooware.nl
+      secretName: prd-website-strooware-certs
+  ingressClassName: traefik

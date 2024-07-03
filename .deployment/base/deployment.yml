@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
         - name: website-strooware
-          image: docker.io/strootje/strooware:1
+          image: docker.io/strootje/strooware:2
           imagePullPolicy: IfNotPresent
 
           ports:
