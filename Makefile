@@ -1,6 +1,6 @@
 ENVIRONMENT=production
 -include .env.local
-VERSION=2
+VERSION=4
 
 serve:
 	@hugo --environment="${ENVIRONMENT}" serve

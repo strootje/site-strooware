@@ -6,7 +6,6 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: traefik
     cert-manager.io/cluster-issuer: acme-letsencrypt-production
-    traefik.ingress.kubernetes.io/router.middlewares: traefik-system-redirect-https@kubernetescrd
 
 spec:
   rules:
@@ -18,7 +17,7 @@ spec:
               service:
                 name: website-strooware
                 port:
-                  number: 80
+                  name: http
             pathType: Prefix
   tls:
     - hosts:

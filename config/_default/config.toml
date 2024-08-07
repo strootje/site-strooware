@@ -1,7 +1,7 @@
 
 # Base Settings
 title = "Coaching | Strooware Interactive"
-baseURL = "https://strooware.xyz"
+baseURL = "https://strooware.nl"
 
 # Theme Settings
 theme = "strooware"
