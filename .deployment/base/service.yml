@@ -2,13 +2,9 @@ apiVersion: v1
 kind: Service
 
 metadata:
-  name: website-strooware
+  name: site-strooware
 
 spec:
-  type: ClusterIP
-
   ports:
-    - name: http
-      targetPort: http
-      protocol: TCP
-      port: 80
+    - { name: http, targetPort: http, protocol: TCP, port: 80 }
+  type: ClusterIP

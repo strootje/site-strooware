@@ -2,10 +2,9 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 
 metadata:
-  name: website-strooware
+  name: site-strooware
   annotations:
-    kubernetes.io/ingress.class: traefik
-    cert-manager.io/cluster-issuer: acme-letsencrypt-production
+    cert-manager.io/cluster-issuer: letsencrypt-prod
 
 spec:
   rules:
@@ -15,12 +14,10 @@ spec:
           - path: /
             backend:
               service:
-                name: website-strooware
+                name: site-strooware
                 port:
                   name: http
             pathType: Prefix
   tls:
-    - hosts:
-        - strooware.nl
-      secretName: prd-website-strooware-certs
-  ingressClassName: traefik
+    - hosts: [strooware.nl]
+      secretName: site-strooware-cert

@@ -2,22 +2,17 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-  name: website-strooware
+  name: site-strooware
 
 spec:
-  replicas: 1
-  revisionHistoryLimit: 1
-
   template:
     spec:
       containers:
-        - name: website-strooware
-          image: docker.io/strootje/strooware:4
+        - name: site-strooware
+          image: docker.io/strootje/strooware:main
           imagePullPolicy: IfNotPresent
-
           ports:
-            - name: http
-              containerPort: 80
-              protocol: TCP
-
-      serviceAccountName: website-strooware
+            - { name: http, containerPort: 80, protocol: TCP }
+      serviceAccountName: strooware
+  revisionHistoryLimit: 1
+  replicas: 1
