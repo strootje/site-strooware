@@ -9,5 +9,5 @@ RUN <<EOF
 hugo --environment="production" --minify
 EOF
 
-FROM docker.io/11notes/caddy:2.10.0
-COPY --from=bundler /website/public /caddy/var
+FROM docker.io/lipanski/docker-static-website:2.6.0
+COPY --from=bundler /website/public .
