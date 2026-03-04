@@ -8,7 +8,7 @@ RUN deno i
 FROM deps AS build
 COPY *.config.ts .
 COPY src/ ./src/
-COPY pkgs/ ./pkgs/
+# COPY pkgs/ ./pkgs/
 COPY public/ ./public/
 RUN deno task build
 
