@@ -1,0 +1,47 @@
+{
+  "tasks": {
+    "dev": "vite dev"
+  },
+
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "solid-js",
+
+    "lib": [
+      "deno.ns",
+      "window"
+    ],
+
+    "types": [
+      "vite/client"
+    ]
+  },
+
+  "workspace": [
+    "pkgs/**"
+  ],
+
+  "imports": {
+    "#/": "./src/"
+  },
+
+  "fmt": {
+    "lineWidth": 120
+  },
+
+  "lint": {
+    "plugins": [
+      "jsr:@ryu/deno-lint-plugin-tailwindcss@0.2.0"
+    ]
+  },
+
+  "test": {
+    "include": [
+      "*.test.ts"
+    ]
+  },
+  "allowScripts": {
+    "allow": ["npm:deno@2.7.1"],
+    "deny": ["npm:esbuild@0.27.3"]
+  }
+}

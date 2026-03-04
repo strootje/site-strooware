@@ -1,13 +1,21 @@
-FROM docker.io/golang:alpine as bundler
-RUN apk add --no-cache npm make hugo git
+ARG DENO_VERSION=2.6.4
+FROM docker.io/denoland/deno:alpine-${DENO_VERSION} AS deps
 
-WORKDIR /website
-COPY . /website
+WORKDIR /build
+COPY deno.* package.* .
+RUN deno i
 
-RUN <<EOF
-#!/usr/bin/env sh
-hugo --environment="production" --minify
-EOF
+FROM deps AS build
+COPY *.config.ts .
+COPY src/ ./src/
+COPY pkgs/ ./pkgs/
+COPY public/ ./public/
+RUN deno task build
 
-FROM docker.io/lipanski/docker-static-website:2.6.0
-COPY --from=bundler /website/public .
+FROM docker.io/denoland/deno:alpine-${DENO_VERSION}
+WORKDIR /app
+COPY --from=build /build/.output .
+
+EXPOSE 5173
+
+CMD ["deno", "run", "--allow-all", "server/index.mjs"]
