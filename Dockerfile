@@ -1,5 +1,5 @@
 ARG DENO_VERSION=2.6.4
-FROM docker.io/denoland/deno:alpine-${DENO_VERSION} AS deps
+FROM docker.io/denoland/deno:${DENO_VERSION} AS deps
 
 WORKDIR /build
 COPY deno.* package.* .
