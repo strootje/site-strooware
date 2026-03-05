@@ -18,9 +18,9 @@ export const Route = createFileRoute("/_site")({
           </h1>
         </header>
 
-        <section class="grow">
+        <div class="grow">
           <Outlet />
-        </section>
+        </div>
 
         <footer class="grid justify-center gap-2 text-xs">
           <Show when={data().flags.isFreelancing}>
